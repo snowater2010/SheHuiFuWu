@@ -8,7 +8,7 @@
 
 #import "SH_AppDelegate.h"
 
-#import "SH_ViewController.h"
+#import "SH_StartCtro.h"
 
 @implementation SH_AppDelegate
 
@@ -19,14 +19,20 @@
     [super dealloc];
 }
 
+//获得app delegate
++ (SH_AppDelegate *)appDelegate
+{
+    return (SH_AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[[SH_ViewController alloc] initWithNibName:@"SH_ViewController_iPhone" bundle:nil] autorelease];
+        self.viewController = [[[SH_StartCtro alloc] init] autorelease];
     } else {
-        self.viewController = [[[SH_ViewController alloc] initWithNibName:@"SH_ViewController_iPad" bundle:nil] autorelease];
+//        self.viewController = [[[SH_ViewController alloc] initWithNibName:@"SH_ViewController_iPad" bundle:nil] autorelease];
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];

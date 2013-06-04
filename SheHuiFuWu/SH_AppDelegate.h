@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class SH_ViewController;
+@class SH_StartCtro;
 
 @interface SH_AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) SH_ViewController *viewController;
+@property (strong, nonatomic) SH_StartCtro *viewController;
+
++ (SH_AppDelegate *)appDelegate;
 
 @end
