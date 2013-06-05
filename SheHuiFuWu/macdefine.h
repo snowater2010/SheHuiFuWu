@@ -7,6 +7,7 @@
 //
 
 #define SERVICE_URL         @"http://222.173.30.135:8088/ylgl/webif"
+#define TENCENT_APP_ID      @"100455456"
 
 //获取屏幕高度
 #define _DEVICE_STATEBAR_HEIGHT 20
@@ -38,8 +39,8 @@
 //简单的警示框
 #define _ALERT_SIMPLE_(_msg) \
         {\
-            NSString* str_note   = _GET_LOCALIZED_STRING_(@"alert_note");\
-            NSString* str_cancel = _GET_LOCALIZED_STRING_(@"alert_sure");\
+            NSString* str_note   = NSLocalizedString(@"alert_note", nil);\
+            NSString* str_cancel = NSLocalizedString(@"alert_sure", nil);\
             UIAlertView *alert=[[UIAlertView alloc] initWithTitle:str_note message:_msg delegate:nil cancelButtonTitle:str_cancel otherButtonTitles:nil, nil];\
             [alert show];\
             [alert release];\
@@ -47,8 +48,8 @@
 //有确认的警示框(1个按钮)
 #define _ALERT_CONFIRM_(_msg, _delegate, _tag) \
         {\
-            NSString* str_note   = _GET_LOCALIZED_STRING_(@"alert_note");\
-            NSString* str_cancel = _GET_LOCALIZED_STRING_(@"alert_sure");\
+            NSString* str_note   = NSLocalizedString(@"alert_note", nil);\
+            NSString* str_cancel = NSLocalizedString(@"alert_sure", nil);\
             UIAlertView *alert=[[UIAlertView alloc] initWithTitle:str_note message:_msg delegate:_delegate cancelButtonTitle:str_cancel otherButtonTitles:nil, nil];\
             alert.tag = _tag;    \
             [alert show];\
@@ -57,9 +58,9 @@
 //有选择的警示框(2个按钮)
 #define _ALERT_SELECT_(_msg, _delegate, _tag)\
         {\
-            NSString* str_note   = _GET_LOCALIZED_STRING_(@"alert_note");\
-            NSString* str_sure   = _GET_LOCALIZED_STRING_(@"alert_sure");\
-            NSString* str_cancel   = _GET_LOCALIZED_STRING_(@"alert_cancel");\
+            NSString* str_note   = NSLocalizedString(@"alert_note", nil);\
+            NSString* str_cancel = NSLocalizedString(@"alert_sure", nil);\
+            NSString* str_cancel   = NSLocalizedString(@"alert_cancel", nil);\
             UIAlertView *alert=[[UIAlertView alloc] initWithTitle:str_note message:_msg delegate:_delegate cancelButtonTitle:str_cancel otherButtonTitles:str_sure, nil];\
             alert.tag = _tag;\
             [alert show];\

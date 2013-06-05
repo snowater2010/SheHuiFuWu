@@ -5,4 +5,10 @@
   Created by lipeng11 on 13-6-3.
   Copyright (c) 2013年 shehuifuwu. All rights reserved.
 */
-"title_app_name"                        = "大兴社会服务网";
+
+//alert
+"alert_note"                        = "提示";
+"alert_sure"                        = "确定";
+"alert_cancel"                      = "取消";
+
+"title_app_name"                    = "大兴社会服务网";

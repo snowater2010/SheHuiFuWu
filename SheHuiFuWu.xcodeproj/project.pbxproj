@@ -301,6 +301,11 @@
 		F67EA75E175CE07B0088785D /* weather_a8.png in Resources */ = {isa = PBXBuildFile; fileRef = F67EA659175CE07B0088785D /* weather_a8.png */; };
 		F67EA75F175CE07B0088785D /* weather_a9.png in Resources */ = {isa = PBXBuildFile; fileRef = F67EA65A175CE07B0088785D /* weather_a9.png */; };
 		F67EA77B175CF3380088785D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F67EA77A175CF3380088785D /* Localizable.strings */; };
+		F684A2F0175F8FAA00DF470C /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F684A2EE175F8FAA00DF470C /* TencentOpenApi_IOS_Bundle.bundle */; };
+		F684A2F3175F909300DF470C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F684A2F2175F909300DF470C /* libsqlite3.dylib */; };
+		F684A2F5175F91B700DF470C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F684A2F4175F91B700DF470C /* CoreTelephony.framework */; };
+		F684A2FA175F970600DF470C /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F684A2ED175F8FAA00DF470C /* TencentOpenAPI.framework */; };
+		F684A2FC175F98B400DF470C /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F684A2FB175F98B400DF470C /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -627,6 +632,11 @@
 		F67EA659175CE07B0088785D /* weather_a8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather_a8.png; sourceTree = "<group>"; };
 		F67EA65A175CE07B0088785D /* weather_a9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weather_a9.png; sourceTree = "<group>"; };
 		F67EA77A175CF3380088785D /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F684A2ED175F8FAA00DF470C /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		F684A2EE175F8FAA00DF470C /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		F684A2F2175F909300DF470C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F684A2F4175F91B700DF470C /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F684A2FB175F98B400DF470C /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -634,6 +644,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F684A2FC175F98B400DF470C /* libstdc++.dylib in Frameworks */,
+				F684A2FA175F970600DF470C /* TencentOpenAPI.framework in Frameworks */,
+				F684A2F5175F91B700DF470C /* CoreTelephony.framework in Frameworks */,
+				F684A2F3175F909300DF470C /* libsqlite3.dylib in Frameworks */,
 				F67EA550175CDDF00088785D /* libz.1.2.5.dylib in Frameworks */,
 				F67EA4DC175CD2C10088785D /* CoreGraphics.framework in Frameworks */,
 				F67EA54E175CDDBF0088785D /* MobileCoreServices.framework in Frameworks */,
@@ -713,12 +727,15 @@
 			isa = PBXGroup;
 			children = (
 				F67EA54F175CDDF00088785D /* libz.1.2.5.dylib */,
+				F684A2F2175F909300DF470C /* libsqlite3.dylib */,
+				F684A2FB175F98B400DF470C /* libstdc++.dylib */,
 				F67EA54D175CDDBE0088785D /* MobileCoreServices.framework */,
 				F67EA54B175CDDA20088785D /* SystemConfiguration.framework */,
 				F67EA4D7175CD2C10088785D /* UIKit.framework */,
 				F67EA549175CDD6E0088785D /* CFNetwork.framework */,
 				F67EA4D9175CD2C10088785D /* Foundation.framework */,
 				F67EA4DB175CD2C10088785D /* CoreGraphics.framework */,
+				F684A2F4175F91B700DF470C /* CoreTelephony.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -802,6 +819,7 @@
 		F67EA51A175CDCE10088785D /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				F684A2EC175F8FAA00DF470C /* Tencent */,
 				F67EA551175CDEE50088785D /* UIColor+MLPFlatColors */,
 				F67EA51B175CDCE10088785D /* ASIHTTPRequest */,
 				F67EA534175CDCE10088785D /* JSON */,
@@ -1160,6 +1178,15 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		F684A2EC175F8FAA00DF470C /* Tencent */ = {
+			isa = PBXGroup;
+			children = (
+				F684A2ED175F8FAA00DF470C /* TencentOpenAPI.framework */,
+				F684A2EE175F8FAA00DF470C /* TencentOpenApi_IOS_Bundle.bundle */,
+			);
+			path = Tencent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1478,6 +1505,7 @@
 				F67EA75E175CE07B0088785D /* weather_a8.png in Resources */,
 				F67EA75F175CE07B0088785D /* weather_a9.png in Resources */,
 				F67EA77B175CF3380088785D /* Localizable.strings in Resources */,
+				F684A2F0175F8FAA00DF470C /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1569,10 +1597,18 @@
 		F67EA4FB175CD2C20088785D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SheHuiFuWu/Vendor/Tencent\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SheHuiFuWu/SheHuiFuWu-Prefix.pch";
 				INFOPLIST_FILE = "SheHuiFuWu/SheHuiFuWu-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-fobjc-arc",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1581,10 +1617,18 @@
 		F67EA4FC175CD2C20088785D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SheHuiFuWu/Vendor/Tencent\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SheHuiFuWu/SheHuiFuWu-Prefix.pch";
 				INFOPLIST_FILE = "SheHuiFuWu/SheHuiFuWu-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = (
+					"-fobjc-arc",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

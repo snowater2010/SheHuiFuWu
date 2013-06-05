@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <TencentOpenAPI/TencentOAuth.h>
 
 @class SH_StartCtro;
 
