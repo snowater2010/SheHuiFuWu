@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <TencentOpenAPI/TencentOAuth.h>
+#import "BMapKit.h"
 
 @class SH_StartCtro;
 

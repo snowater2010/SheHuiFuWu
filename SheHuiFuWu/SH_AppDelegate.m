@@ -9,6 +9,12 @@
 #import "SH_AppDelegate.h"
 #import "SH_StartCtro.h"
 
+@interface SH_AppDelegate () <BMKGeneralDelegate>
+
+@property(nonatomic, retain) BMKMapManager *mapManager;
+
+@end
+
 @implementation SH_AppDelegate
 
 - (void)dealloc
@@ -26,6 +32,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // 要使用百度地图，请先启动BaiduMapManager
+	BMKMapManager *mapManager = [[BMKMapManager alloc]init];
+    self.mapManager = mapManager;
+    [mapManager release];
+	BOOL ret = [_mapManager start:@"F4FE5A4C37FA5DF853C43FC575557AC2D38CCD69" generalDelegate:self];
+	if (!ret) {
+		NSLog(@"manager start failed!");
+	}
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
@@ -73,6 +89,27 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark-
+#pragma BMKGeneralDelegate
+
+/**
+ *返回网络错误
+ *@param iError 错误号
+ */
+- (void)onGetNetworkState:(int)iError
+{
+    
+}
+
+/**
+ *返回授权验证错误
+ *@param iError 错误号 : BMKErrorPermissionCheckFailure 验证失败
+ */
+- (void)onGetPermissionState:(int)iError
+{
+    
 }
 
 @end

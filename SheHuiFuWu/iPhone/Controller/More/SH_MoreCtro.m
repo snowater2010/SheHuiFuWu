@@ -7,6 +7,7 @@
 //
 
 #import "SH_MoreCtro.h"
+#import "BMKMapView.h"
 
 @interface SH_MoreCtro ()
 
@@ -23,7 +24,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
+    BMKMapView* mapView = [[BMKMapView alloc]initWithFrame:self.view.bounds];
+    [self.view addSubview:mapView];
 }
 
 - (void)didReceiveMemoryWarning

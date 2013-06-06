@@ -45,8 +45,9 @@
     
 	// init the RecognizeControl
     // 初始化语音识别控件
-	self.iFlyRecognizeControl = [[IFlyRecognizeControl alloc] initWithOrigin:H_CONTROL_ORIGIN initParam:initParam];
-	
+	IFlyRecognizeControl *iFlyRecognizeControl = [[IFlyRecognizeControl alloc] initWithOrigin:H_CONTROL_ORIGIN initParam:initParam];
+	self.iFlyRecognizeControl = iFlyRecognizeControl;
+    [iFlyRecognizeControl release];
     [self.view addSubview:_iFlyRecognizeControl];
     
     // Configure the RecognizeControl

@@ -59,8 +59,9 @@
                      kOPEN_PERMISSION_MATCH_NICK_TIPS_WEIBO,
                      nil];
     
-    self.tencentOAuth = [[TencentOAuth alloc] initWithAppId:TENCENT_APP_ID andDelegate:self];
-    
+    TencentOAuth *tencentOAuth = [[TencentOAuth alloc] initWithAppId:TENCENT_APP_ID andDelegate:self];
+    self.tencentOAuth = tencentOAuth;
+    [tencentOAuth release];
 }
 
 - (void)didReceiveMemoryWarning
