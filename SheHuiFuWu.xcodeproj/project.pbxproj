@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F60B651F17601BBE003B5BB4 /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60B651E17601BBE003B5BB4 /* iflyMSC.framework */; };
+		F60B652217601EF9003B5BB4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60B652117601EF9003B5BB4 /* AudioToolbox.framework */; };
+		F60B652417602237003B5BB4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60B652317602237003B5BB4 /* QuartzCore.framework */; };
 		F613EEAF175E319C00ECD8A3 /* SH_MainCtro.m in Sources */ = {isa = PBXBuildFile; fileRef = F613EEAE175E319C00ECD8A3 /* SH_MainCtro.m */; };
 		F613EEBE175E389900ECD8A3 /* SH_HomeCtro.m in Sources */ = {isa = PBXBuildFile; fileRef = F613EEBD175E389900ECD8A3 /* SH_HomeCtro.m */; };
 		F613EEC7175E3D8A00ECD8A3 /* SH_MoreCtro.m in Sources */ = {isa = PBXBuildFile; fileRef = F613EEC6175E3D8A00ECD8A3 /* SH_MoreCtro.m */; };
@@ -309,6 +312,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F60B651E17601BBE003B5BB4 /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
+		F60B652117601EF9003B5BB4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F60B652317602237003B5BB4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F613EEAD175E319C00ECD8A3 /* SH_MainCtro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SH_MainCtro.h; sourceTree = "<group>"; };
 		F613EEAE175E319C00ECD8A3 /* SH_MainCtro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SH_MainCtro.m; sourceTree = "<group>"; };
 		F613EEBC175E389900ECD8A3 /* SH_HomeCtro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SH_HomeCtro.h; sourceTree = "<group>"; };
@@ -645,22 +651,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				F684A2FC175F98B400DF470C /* libstdc++.dylib in Frameworks */,
-				F684A2FA175F970600DF470C /* TencentOpenAPI.framework in Frameworks */,
-				F684A2F5175F91B700DF470C /* CoreTelephony.framework in Frameworks */,
 				F684A2F3175F909300DF470C /* libsqlite3.dylib in Frameworks */,
 				F67EA550175CDDF00088785D /* libz.1.2.5.dylib in Frameworks */,
+				F60B652417602237003B5BB4 /* QuartzCore.framework in Frameworks */,
+				F60B652217601EF9003B5BB4 /* AudioToolbox.framework in Frameworks */,
+				F684A2FA175F970600DF470C /* TencentOpenAPI.framework in Frameworks */,
+				F684A2F5175F91B700DF470C /* CoreTelephony.framework in Frameworks */,
 				F67EA4DC175CD2C10088785D /* CoreGraphics.framework in Frameworks */,
 				F67EA54E175CDDBF0088785D /* MobileCoreServices.framework in Frameworks */,
 				F67EA54C175CDDA20088785D /* SystemConfiguration.framework in Frameworks */,
 				F67EA54A175CDD6E0088785D /* CFNetwork.framework in Frameworks */,
 				F67EA4D8175CD2C10088785D /* UIKit.framework in Frameworks */,
 				F67EA4DA175CD2C10088785D /* Foundation.framework in Frameworks */,
+				F60B651F17601BBE003B5BB4 /* iflyMSC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F60B651D17601BBE003B5BB4 /* IflyMSC */ = {
+			isa = PBXGroup;
+			children = (
+				F60B651E17601BBE003B5BB4 /* iflyMSC.framework */,
+			);
+			path = IflyMSC;
+			sourceTree = "<group>";
+		};
 		F613EEA8175E314800ECD8A3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -729,6 +746,8 @@
 				F67EA54F175CDDF00088785D /* libz.1.2.5.dylib */,
 				F684A2F2175F909300DF470C /* libsqlite3.dylib */,
 				F684A2FB175F98B400DF470C /* libstdc++.dylib */,
+				F60B652317602237003B5BB4 /* QuartzCore.framework */,
+				F60B652117601EF9003B5BB4 /* AudioToolbox.framework */,
 				F67EA54D175CDDBE0088785D /* MobileCoreServices.framework */,
 				F67EA54B175CDDA20088785D /* SystemConfiguration.framework */,
 				F67EA4D7175CD2C10088785D /* UIKit.framework */,
@@ -819,6 +838,7 @@
 		F67EA51A175CDCE10088785D /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				F60B651D17601BBE003B5BB4 /* IflyMSC */,
 				F684A2EC175F8FAA00DF470C /* Tencent */,
 				F67EA551175CDEE50088785D /* UIColor+MLPFlatColors */,
 				F67EA51B175CDCE10088785D /* ASIHTTPRequest */,
@@ -1600,6 +1620,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SheHuiFuWu/Vendor/Tencent\"",
+					"\"$(SRCROOT)/SheHuiFuWu/Vendor/IflyMSC\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SheHuiFuWu/SheHuiFuWu-Prefix.pch";
@@ -1620,6 +1641,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SheHuiFuWu/Vendor/Tencent\"",
+					"\"$(SRCROOT)/SheHuiFuWu/Vendor/IflyMSC\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SheHuiFuWu/SheHuiFuWu-Prefix.pch";

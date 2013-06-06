@@ -34,10 +34,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
-	
-    self.title = NSLocalizedString(@"title_app_name", nil);
 }
 
 - (void)didReceiveMemoryWarning

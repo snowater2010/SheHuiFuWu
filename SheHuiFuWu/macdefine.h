@@ -7,7 +7,13 @@
 //
 
 #define SERVICE_URL         @"http://222.173.30.135:8088/ylgl/webif"
+
+//tencent
 #define TENCENT_APP_ID      @"100455456"
+
+//iFly
+#define IFLY_APPID @"51a57176"
+#define IFLY_ENGINE_URL @"http://dev.voicecloud.cn:1028/index.htm"
 
 //获取屏幕高度
 #define _DEVICE_STATEBAR_HEIGHT 20
